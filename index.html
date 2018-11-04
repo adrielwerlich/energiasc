@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./static/images/favicon_sun.png">
+
+    <!-- <link rel="stylesheet" href="./../static/bootstrap-4.1.3-dist/css/bootstrap.css" /> -->
+    <!-- <link rel="stylesheet" href="{% static 'bootstrap-4.1.3-dist/css/bootstrap.css.map'%}" /> -->
+    <link rel="stylesheet" href="./../static/css/styles.css" />
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="./../static/bootstrap-4.1.3-dist/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
+
+
+    <title> Enegia SC - Instalação de Painés Solares </title>
+</head>
+
+<body>
+    <header>
+
+        <!-- começa barra horizontal -->
+        <div>
+            <nav class="navbar navbar-expand-md fixed-top bg-white">
+                <a class="navbar-brand" href="#">
+                    <img src="./../static/images/logo_energiasc1.png" height="120" width="180" margin-right="10px"
+                        class="d-inline-block alighn-top" />
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02"
+                    aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse" id="navbarColor02" style="">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="custom-link btn-lg btn-success btn-budget" role="button" id="link-show-form">Orçamento
+                                gratuito </a>
+                            <!-- <span class="sr-only">(current)</span> -->
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a class="custom-link" role="button" id="link-budget-sample">Como é um orçamento</a>
+                    </li> -->
+                        <li class="nav-item">
+                            <a class="custom-link" id="link-show-hardware">Equipamentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="custom-link" id="link-show-explanation">Lógica da operação</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="custom-link" id="link-show-aboutUs">Sobre nós</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+        <!-- termina barra horizontal -->
+
+    </header>
+    <!-- carrossel -->
+    <div class="container">
+        <div id="solar_carouselslide" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#solar_carouselslide" data-slide-to="0" class="active"></li>
+                <li data-target="#solar_carouselslide" data-slide-to="1"></li>
+                <li data-target="#solar_carouselslide" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+
+                <div class="carousel-item active"><img src="./../static/images/spa_(3).jpg" class="myfill d-block"
+                        alt="img4">
+                    <div class="carousel-caption d-none d-md-block ">
+                        <h1 class="text-white">Tecnologias Limpas São a Única Chance da Humanidade</h1>
+                        <p class="text-white">Os combustíveis fósseis vão acabar. Além disso, não são fontes limpas!</p>
+                    </div>
+                </div>
+                <div class="carousel-item"><img src="./../static/images/spa_(2).jpg" class="myfill d-block" alt="img5">
+                    <div class="carousel-caption d-none d-md-block ">
+                        <h1 class="font-weight-bold">Seja um produtor de eletricidade e livre-se da conta
+                            de
+                            Luz</h1>
+                        <p class="font-weight-bold  ">Projetos residenciais podem reduzir em até 95% a
+                            fatura. Projetos industriais
+                            podem zerar o custo de consumo </p>
+                    </div>
+                </div>
+                <div class="carousel-item"><img src="./../static/images/spa (4).jpg" class="myfill d-block" alt="img6">
+                    <div class="carousel-caption d-none d-md-block ">
+                        <h1>A eletricidade está cara e cada vez mais difícil de se obter</h1>
+                        <p>As fontes tradicionais de geração de eletricidade estão cada vez mais escassas e caras</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#solar_carouselslide" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#solar_carouselslide" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!-- termina carrossel -->
+
+    <!-- começa cartões das equipes -->
+    <div id="card-equipe" style="display:none;" tabindex="-1" href="card-equip">
+        <div class="container cartoes">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4 shadow-sm">
+                        <!-- <img class="card-img-top" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+                            src="./../static/images/ad.jpg" data-holder-rendered="true"> -->
+                        <div class="card-body">
+                            <p class="card-text">Aqui breve descrição sobre membro da equipe.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Mais info</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4 shadow-sm">
+                        <!-- <img class="card-img-top" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+                            src="./../static/images/ad.jpg" data-holder-rendered="true"> -->
+                        <div class="card-body">
+                            <p class="card-text">Aqui breve descrição sobre membro da equipe.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Mais info</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- termina cartões das equipes -->
+
+    <!-- começa explicação sobre nós -->
+    <div id="aboutUs" style="display:none;">
+        <div class="col-sm-12 col-xs-12 colTextProd">
+            <div class="divAboutUs">
+                <h3>Energia Solar Limpa e Renovável</h3>
+                <p>A Energia SC nasceu da necessidade da busca de soluções econômicas e sustentáveis
+                    para redução do custo da energia elétrica. Empresa Catarinense, localizada na
+                    cidade
+                    de Lages, atua com a instalação de sistemas fotovoltáicos, para atendimento de
+                    clientes
+                    residenciais e empresariais (comércio e industria).
+                    Temos o compromisso em ser uma empresa responsável com as pessoas e com o meio
+                    ambiente,
+                    além de fornecer produtos e serviços seguros e confiáveis preservando a natureza ao
+                    mesmo
+                    tempo que buscamos o crescimento e a expansão do mercado de energia limpa e
+                    renovável.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- termina explicação como funciona -->
+
+
+
+    <!-- começa explicação como funciona -->
+    <div id="how-it-works" style="display:block;">
+        <h2 class="text-center">Lógica de operação</h2>
+        <div class="listaProdutos">
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-8 colImgProd">
+                            <img class="img-responsive sist-ongrid" alt="Lógica da operação" title="Lógica da operação"
+                                src="./../static/images/sistema-ongrid.jpg">
+                        </div>
+                        <div class="col-xs-8 steps">
+                            <ul class="myinline">
+                                <li>1 - célula fotovoltáica captura a radiação luminosa do sol</li>
+                                <li>2 - inversor converte corrente contínua em corrente alternada</li>
+                                <li>3 - essa eletricidade produzida alimenta os aparelhos do local</li>
+                                <li>4 - o excedente é enviado ao contador bidirecional que o injeta na rede da 
+                                    concessionária </li>
+                                <li>5 - se o sistema fotovoltáico produzir menos do que se consome, a eletricidade é trazida da rede da concessionária </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 col-xs-12 colTextProd">
+                            <div class="textoProd">
+                                <h3>Sistema de Créditos - Entenda como funciona</h3>
+                                <p>Você produz eletricidade e injeta na rede ganhando créditos. Por ex., gerou 5Kwh e
+                                    consumiu
+                                    3Kwh. O excedente 2 Kwh fica como créditos para ser consumido posteriormente sem
+                                    nenhum custo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- termina explicação como funciona -->
+
+    <!-- começa amostra de orçamento -->
+    <div id="budget-sample" style="display:none;">
+        <h2 class="text-center">Como é o orçamento que você vai receber</h2>
+        <div class="listaProdutos">
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12 colTextProd">
+                            <div class="textoProd">
+                                <h4>O orçamento elaborado terá os detalhes de equipamentos. Veja a figura</h4>
+                            </div>
+                            <div class="col-sm-12 col-xs-12 colImgProd">
+                                <!-- <img class="img-responsive " alt="Lógica da operação" title="Lógica da operação" src="./../static/images/amostraOrcamento1.png"> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- termina amostra de orçamento -->
+
+    <!-- começa lista de produtos -->
+    <div id="produtosPhb" style="display:none;">
+        <h2 class="text-center">Amostra dos equipamentos</h2>
+        <div class="listaProdutos">
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12 colImgProd">
+                            <img class="img-responsive" alt="Kits Fotovoltaicos PHB" title="Kits Fotovoltaicos PHB" src="https://www.energiasolarphb.com.br/images/produtos/kits-solares.jpg">
+                        </div>
+                        <div class="col-sm-6 col-xs-12 colTextProd">
+                            <div class="textoProd">
+                                <h3>Kits Fotovoltaicos PHB</h3>
+                                <p>Kit Gerador Fotovoltaico mais COMPLETO do mercado.</p>
+                                <a class="btSaibaMais" href="https://www.energiasolarphb.com.br/kits-fotovoltaicos.php"
+                                    title="Saiba mais sobre Kits Solares">SAIBA MAIS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12 colImgProd">
+                            <img class="img-responsive" alt="Inversor Solar Fotovoltáico Monofásico PHB" title="Inversor Solar Fotovoltáico Monofásico PHB"
+                                src="https://www.energiasolarphb.com.br/images/produtos/inversor-1500-ns.jpg">
+                        </div>
+                        <div class="col-sm-6 col-xs-12 colTextProd">
+                            <div class="textoProd">
+                                <h3>Inversor Solar Fotovoltáico Monofásico PHB</h3>
+                                <p>A nova linha de inversores monofásicos PHB, ideal para instalações conectadas à
+                                    rede elétrica brasileira, conta com sistema de monitoramento Wi-Fi acoplado e
+                                    está devidamente regularizada junto ao INMETRO e a ANATEL.</p>
+                                <a class="btSaibaMais" href="https://www.energiasolarphb.com.br/inversores-monofasicos.php"
+                                    title="Saiba mais sobre o Inversor Solar Fotovoltáico Monofásico PHB">SAIBA
+                                    MAIS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12 colImgProd">
+                            <img class="img-responsive" alt="Inversor Solar Fotovoltáico Trifásico PHB" title="Inversor Solar Fotovoltáico Trifásico PHB"
+                                src="https://www.energiasolarphb.com.br/images/produtos/inversor-25-kw.jpg">
+                        </div>
+                        <div class="col-sm-6 col-xs-12 colTextProd">
+                            <div class="textoProd">
+                                <h3>Inversor Solar Fotovoltáico Trifásico PHB</h3>
+                                <p>A nova linha de inversores trifásicos PHB, ideal para instalações de médio e
+                                    grande porte, conta com sistema de monitoramento Wi-Fi acoplado e está
+                                    devidamente regularizada junto ao INMETRO e a ANATEL.</p>
+                                <a class="btSaibaMais" href="https://www.energiasolarphb.com.br/inversores-trifasicos.php"
+                                    title="Saiba mais sobre o Inversor Solar Fotovoltáico Trifásico PHB">SAIBA MAIS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12 colImgProd">
+                            <img class="img-responsive" alt="Gerador Fotovoltaico Off-Grid PHB" title="Gerador Fotovoltaico Off-Grid PHB"
+                                src="https://www.energiasolarphb.com.br/images/produtos/gerador-off-grid.jpg">
+                        </div>
+                        <div class="col-sm-6 col-xs-12 colTextProd">
+                            <div class="textoProd">
+                                <h3>Gerador Fotovoltaico Off-Grid PHB</h3>
+                                <p>O Gerador Fotovoltaico Off-grid é ideal para alimentação de cargas residenciais
+                                    e comerciais em locais remotos onde não chega a rede elétrica.</p>
+                                <a class="btSaibaMais" href="https://www.energiasolarphb.com.br/gerador-fotovoltaico-off-grid.php"
+                                    title="Saiba mais sobre o Gerador Fotovoltaico Off-Grid PHB">SAIBA MAIS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12 colImgProd">
+                            <img class="img-responsive" alt="Gerador Fotovoltaico Híbrido PHB" title="Gerador Fotovoltaico Híbrido PHB"
+                                src="https://www.energiasolarphb.com.br/images/produtos/gerador-hibrido.jpg">
+                        </div>
+                        <div class="col-sm-6 col-xs-12 colTextProd">
+                            <div class="textoProd">
+                                <h3>Gerador Fotovoltaico Híbrido PHB</h3>
+                                <p>Gerador Fotovoltaico Híbrido PHB para alimentação de cargas prioritárias, em
+                                    instalações de funcionamento ininterrupto e seguro, com sistema de backup.</p>
+                                <a class="btSaibaMais" href="https://www.energiasolarphb.com.br/gerador-fotovoltaico-hibrido.php"
+                                    title="Saiba mais sobre o Gerador Fotovoltaico Híbrido PHB">SAIBA MAIS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12 colImgProd">
+                            <img class="img-responsive" alt="Sistema de Monitoramento PHB Logger PRO" title="Sistema de Monitoramento PHB Logger PRO"
+                                src="https://www.energiasolarphb.com.br/images/produtos/logger-pro.jpg">
+                        </div>
+                        <div class="col-sm-6 col-xs-12 colTextProd">
+                            <div class="textoProd">
+                                <h3>Sistema de Monitoramento PHB Logger PRO</h3>
+                                <p>Aplicável para sistemas de grande porte, o PHB Logger PRO transmite as
+                                    informações automaticamente para a nossa central de monitoramento.</p>
+                                <a class="btSaibaMais" href="https://www.energiasolarphb.com.br/phb-logger-pro.php"
+                                    title="Saiba mais sobre o Sistema de Monitoramento PHB Logger PRO">SAIBA MAIS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12 colImgProd">
+                            <img class="img-responsive" alt="Retificador + Inversor" title="Retificador + Inversor" src="https://www.energiasolarphb.com.br/images/produtos/srgd.jpg">
+                        </div>
+                        <div class="col-sm-6 col-xs-12 colTextProd">
+                            <div class="textoProd">
+                                <h3>Retificador + Inversor</h3>
+                                <p><strong>SRGD – Sistema Retificador para Geração Distribuída</strong></p>
+                                <p>O Sistema Retificador para Geração distribuída da PHB permite a conexão de
+                                    diversas fontes de energia renováveis a rede eletrica brasileira.</p>
+                                <a class="btSaibaMais" href="https://www.energiasolarphb.com.br/retificador-e-inversor.php"
+                                    title="Saiba mais sobre Retificador + Inversor">SAIBA MAIS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12 colImgProd">
+                            <img class="img-responsive" alt="Estruturas para Sustentação de Módulos FV PHB" title="Estruturas para Sustentação de Módulos FV PHB"
+                                src="https://www.energiasolarphb.com.br/images/produtos/estrutura-de-fixacao.jpg">
+                        </div>
+                        <div class="col-sm-6 col-xs-12 colTextProd">
+                            <div class="textoProd">
+                                <h3>Estruturas para Sustentação de Módulos FV PHB</h3>
+                                <p>As Estruturas para sustentação de Módulos Fotovoltaicos da PHB são feitas em
+                                    alumínio anodizado e aço inox. Fabricadas no Brasil e com Design inteligente,
+                                    reduz o tempo de instalação.</p>
+                                <a class="btSaibaMais" href="https://www.energiasolarphb.com.br/estruturas-de-fixacao.php"
+                                    title="Saiba mais sobre Estruturas para Sustentação de Módulos FV PHB">SAIBA
+                                    MAIS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12 colImgProd">
+                            <img class="img-responsive" alt="Kit Ferramentas Solar PHB" title="Kit Ferramentas Solar PHB"
+                                src="https://www.energiasolarphb.com.br/images/produtos/kit-ferramentas.jpg">
+                        </div>
+                        <div class="col-sm-6 col-xs-12 colTextProd">
+                            <div class="textoProd">
+                                <h3>Kit Ferramentas Solar PHB</h3>
+                                <p>Trabalhe com segurança e agilidade. A PHB Solar disponibiliza em seu portfólio
+                                    de produtos o Kit Ferramentas Solar para nossos parceiros realizarem a
+                                    instalação de maneira correta e prática.</p>
+                                <a class="btSaibaMais" href="https://www.energiasolarphb.com.br/kit-ferramentas-solar.php"
+                                    title="Saiba mais sobre Kit Ferramentas Solar PHB">SAIBA MAIS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12 colImgProd">
+                            <img class="img-responsive" alt="Módulos Fotovoltaicos" title="Módulos Fotovoltaicos" src="https://www.energiasolarphb.com.br/images/produtos/modulos-fotovoltaicos.jpg">
+                        </div>
+                        <div class="col-sm-6 col-xs-12 colTextProd">
+                            <div class="textoProd">
+                                <h3>Módulos Fotovoltaicos</h3>
+                                <p>A PHB Solar oferece os melhores módulos fotovoltaicos do mercado. Oferecemos em
+                                    nossos kits módulos dos melhores e maiores fabricantes do mundo. Trabalhamos
+                                    com módulos TIER 1 e ofertamos sempre o melhor custo beneficio para nossos
+                                    parceiros e clientes.</p>
+                                <a class="btSaibaMais" href="https://www.energiasolarphb.com.br/modulos-fotovoltaicos.php"
+                                    title="Saiba mais sobre Módulos Fotovoltaicos">SAIBA MAIS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12 colImgProd">
+                            <img class="img-responsive" alt="Quadro de Proteção CA PHB" title="Quadro de Proteção CA PHB"
+                                src="https://www.energiasolarphb.com.br/images/produtos/quadro-de-protecao.jpg">
+                        </div>
+                        <div class="col-sm-6 col-xs-12 colTextProd">
+                            <div class="textoProd">
+                                <h3>Quadro de Proteção CA PHB</h3>
+                                <p>A PHB Solar desenvolveu uma linha completa de quadros de proteção e isolamento
+                                    de rede.</p>
+                                <a class="btSaibaMais" href="https://www.energiasolarphb.com.br/quadro-ca.php" title="Saiba mais sobre Quadro de Proteção CA PHB">SAIBA
+                                    MAIS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12 colImgProd">
+                            <img class="img-responsive" alt="String Box Monofásico" title="String Box Monofásico" src="https://www.energiasolarphb.com.br/images/produtos/string-box-monofasico.jpg">
+                        </div>
+                        <div class="col-sm-6 col-xs-12 colTextProd">
+                            <div class="textoProd">
+                                <h3>String Box Monofásico</h3>
+                                <p>A PHB Solar desenvolveu uma linha completa de quadros de proteção de corrente
+                                    continua (CC) para aplicação em sistemas fotovoltaicos. O DPS (dispositivo de
+                                    proteção contra surto) que compõe os quadros possuem certificação na norma : EN
+                                    50539-11</p>
+                                <a class="btSaibaMais" href="https://www.energiasolarphb.com.br/string-box-monofasico.php"
+                                    title="Saiba mais sobre String Box Monofásico">SAIBA MAIS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12 colImgProd">
+                            <img class="img-responsive" alt="String Box Trifásico" title="String Box Trifásico" src="https://www.energiasolarphb.com.br/images/produtos/string-box-trifasico.jpg">
+                        </div>
+                        <div class="col-sm-6 col-xs-12 colTextProd">
+                            <div class="textoProd">
+                                <h3>String Box Trifásico</h3>
+                                <p>A PHB Solar desenvolveu uma linha completa de quadros de proteção e isolamento
+                                    para sistemas fotovoltaicos de Corente Contínua CC. O dispositivo de proteção
+                                    contra surto (DPS) que compõe os quadros de proteção possui certificação na
+                                    norma: EN 50539-11</p>
+                                <a class="btSaibaMais" href="https://www.energiasolarphb.com.br/string-box-trifasico.php"
+                                    title="Saiba mais sobre String Box Trifásico">SAIBA MAIS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12 colImgProd">
+                            <img class="img-responsive" alt="Combiner Box" title="Combiner Box" src="https://www.energiasolarphb.com.br/images/produtos/combiner-box.jpg">
+                        </div>
+                        <div class="col-sm-6 col-xs-12 colTextProd">
+                            <div class="textoProd">
+                                <h3>Combiner Box</h3>
+                                <p>Confira o Quadro de Distribuição FV (Combiner Box) para proteção e monitoramento
+                                    de grande usinas Fotovoltaicas PHB.</p>
+                                <a class="btSaibaMais" href="https://www.energiasolarphb.com.br/combiner-box.php" title="Saiba mais sobre Combiner Box">SAIBA
+                                    MAIS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- termina lista de produtos -->
+
+    <!-- começa formulário de contato -->
+    <div class="formContato offset-3">
+        <p id="p_orcamento">Solicite um orçamento preenchendo o formulário abaixo:</p>
+        <form id="formSolicitacao" name="formSolicitacao" method="post" action="https://formspree.io/adrielwerlich@gmail.com">
+            <input type="hidden" name="_next" value="#" />
+            <input type="hidden" name="_subject" value="EnergiaSc solicitação de orçamento!" />
+            <input type="hidden" name="_cc" value="contato@energiasc.com.br" />
+            <input type="hidden" name="_cc" value="adriel@uniplaclages.edu.br" />
+            <input type="hidden" name="_cc" value="adwto@bol.com.br" />
+            <input class="ipt col-7" id="nome_cliente" name="nome_cliente" type="text" placeholder="nome" required><br />
+            <input class="ipt col-7" id="email_cliente" name="email_cliente" type="email" placeholder="email" required><br />
+            <input class="ipt col-7" id="tel_cliente" name="tel_cliente" type="text" placeholder="telefone" required><br />
+            <textarea id="mensagem_cliente" class="col-8" name="mensagem_cliente" placeholder="mensagem"></textarea>
+            <br />
+            <input type="submit" class="btn btn-primary" value="Registrar" />
+        </form>
+    </div>
+    <!-- termina form de contato -->
+
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Volta ao topo</a>
+            </p>
+            <p>Telefone:(49)9 9819-1230 Falar com - Adriano</p>
+            <p class="float-center small"> Desenvolvido por Adriel </p>
+        </div>
+    </footer>
+    <script src='//cdn.freshmarketer.com/374649/926918.js'></script>
+    <script src="./../static/bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</body>
+
+</html>
